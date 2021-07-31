@@ -1,0 +1,20 @@
+Project 1 - Voting Website
+
+Features:
+
+1. Anonymous visitors can create a user profile                                           #done
+
+2. User Login (Mandatory)                                                                 #done
+
+3. Users can find any jobs in any city                                                    #done
+
+4. Users can  view all previously found jobs                                              #done
+
+5. Users can delete jobs they don't like/want
+
+
+Tasks to do to improve the webapp:
+
+1. Works on getting more graphics on the page                                             #done
+
+2. Push all code to github, write instructions and deploy                                 

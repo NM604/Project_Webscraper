@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block body %}
+      <div class="box">
+      <div class="form">
+      <h2> Create an account</h2>
+      <form method = "post" action = "/createuser">
+      <div class = "inputBx">
+      <input name = "username" type = "text" id = "username" placeholder = "Username" required/>
+      </div>
+      <div class = "inputBx">
+      <input name = "password" type = "text" id = "password" placeholder = "Password" required/>
+      </div>
+      <div class = "inputBx">
+      <input type = "submit" value = "Submit">
+      </div>
+      </form>
+      <p>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            {{message}}
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      </p>
+     </div>
+     </div>
+{% endblock %}

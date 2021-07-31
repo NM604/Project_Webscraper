@@ -1,0 +1,82 @@
+.table {
+  position: absolute;
+  width: 65%;
+  border-collapse: collapse;
+  top: 150px;
+  right: 325px;
+  vertical-align: middle;
+  font-size: 1em;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  background-color: #262626;
+  counter-reset: rowNumber;
+  color: #c4c4c4;
+  font-weight: 400;
+}
+
+.table tr:not(:first-child) {
+    counter-increment: rowNumber;
+}
+
+.table tr td:first-child::before {
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}
+
+.thead {
+  height: 20px;
+  padding: 15px;
+  text-align: center;
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  color: #fff;
+}
+
+.tdata {
+  height: 20px;
+  padding: 15px;
+  text-align: center;
+  vertical-align: middle;
+  
+}
+
+.tdata:nth-child(odd) {
+  background-color: #d3d3d3;
+}
+
+.trow {
+  height: 20px;
+  padding: 15px;
+  text-align: center;
+  vertical-align: middle;
+  counter-increment: rowNumber;
+}
+
+.side_div {
+  width: 15%;
+  background-color: #262626;
+  padding: 25px;
+  position: absolute;
+  top: 150px;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0 5px 35px rgba(0,0,0,0.2);
+  font-weight: 600;
+}
+
+.center_div {
+  position: absolute;
+  border: 10px Tomato;
+  border-radius: 8px;
+  right: 550px;
+  width: 40%;
+  text-align: center;
+  padding: 25px;
+  background-color: #262626;
+  bottom: 0px;
+}

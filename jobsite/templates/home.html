@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block body %}
+  <p>
+    <div class="form">
+    <div class="top_div">
+    <table class="table">
+    <tr class="thead">
+      <th> <a href="/home/{{oid}}?order_by=id&order={{order}}">Sl.No.</a> </th>
+      <th> <a href="/home/{{oid}}?order_by=name&order={{order}}">Job-Name</a>  </th>
+      <th> Company </th>
+      <th> <a href="/home/{{oid}}?order_by=found&order={{order}}">Found On</a>  </th>
+      <th> Click Apply! </th>
+     </tr>
+     {% for id, name, fdate, company, url in jobs %}
+     <tr class="trow">
+        <td>.</td>
+        <td class="tdata">{{name}}</td>
+        <td>{{fdate}}</td>
+        <td>{{company}}</td>
+        <td><a href="{{url}}">Apply!</a> </td>
+     </tr>
+     {%endfor%}
+     </table>
+   </p>
+   <div class = "side_div">
+   <p style="color:White; font-family: sans-serif;">
+    <a href="{{url_for('jobs.delete', oid=oid)}}">Refresh your job list</a>
+    <br/>
+    <br/>
+    <a href="{{url_for('jobs.find', oid=oid)}}">Find new jobs</a>
+   </p>
+   </div>
+   </div>
+   </div>
+{% endblock %}

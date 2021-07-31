@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block body %}
+      <div class="center_div">
+      <h2 class="display-4" style="color:White; font-family: sans-serif; font-size: 40px;">Job-Seeking Site</h2>
+      <br/>
+      <h6 class="display-4" style="color:White; font-family: sans-serif; font-size: 20px;">A simple website where you can find any job, anywhere</h6>
+      <br/>
+      <h6 class="display-4" style="color:Red; font-family: sans-serif; font-size: 20px;"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  - A project by NM604</h6>
+     </div>
+     <div class="box">
+          <div class="form">
+              <h2> Login</h2>
+              <form method = "post" action = "/login">
+              <div class = "inputBx">
+                  <input name = "username" type = "text" id = "username" placeholder = "Username" required/>
+                  <img src = "{{url_for('static', filename='user.png')}}">
+              </div>
+              <div class = "inputBx">
+                  <input name = "password" type = "password" id = "password" placeholder = "Password" required/>
+                  <img src = "{{url_for('static', filename='lock.png')}}">
+              </div>
+              <div class = "inputBx">
+                  <input type = "submit" value = "Login"/>
+              </div>
+              </form>
+      <p style="color:White; font-family: sans-serif;">
+        <a href="{{url_for('jobs.create')}}">Create an account</a>
+        {{status}}
+        </div>
+     </div>
+{% endblock %}

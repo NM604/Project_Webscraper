@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block body %}
+     <div class="box">
+     <div class="form">
+     <h2> Search</h2>
+      <form action="{{url_for('jobs.findjobs', oid=oid)}}" method="POST">
+        <div class = "inputBx">
+        <input name = "jobname" type = "text" id = "jobname" placeholder = "Role/Job Title" required/>
+        </div>
+        <div class = "inputBx">
+        <input name = "location" type = "text" id = "location" placeholder = "Location/City" required/>
+        </div>
+        <div class = "inputBx">
+        <input type = "submit" value = "Search">
+        </div>
+      </form>
+      </div>
+      </div>
+{% endblock %}
