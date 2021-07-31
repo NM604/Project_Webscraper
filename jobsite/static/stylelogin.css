@@ -99,8 +99,6 @@
 
 .inputBx img {
   position: absolute;
-  top: 8px;
-  left: 10px;
   transform: scale(0.7);
   filter: invert(1);
 }
