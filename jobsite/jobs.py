@@ -111,7 +111,7 @@ def findjobs(oid):
   location = request.form['location']
   d = datetime.datetime.now().strftime("%Y-%m-%d")
   
-  driver = webdriver.Firefox()
+  driver = webdriver.Firefox()                  #check here
   
   l = jobname.split()
   url = "https://www.naukri.com/"+l[0]+"-"+l[1]+"-jobs-in-"+location+"?k="+l[0]+"%20"+l[1]+"&l="+location
