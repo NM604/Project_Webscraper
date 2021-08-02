@@ -9,12 +9,6 @@ from selenium.webdriver.common.keys import Keys
 import psycopg2
 import os
 
-from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
-
-binary = FirefoxBinary('/app/vendor/firefox/firefox')
-
-driver = webdriver.Firefox(firefox_binary=binary)
-
 bp = Blueprint("jobs", "jobs", url_prefix="")
 
 @bp.route("/")
@@ -117,7 +111,7 @@ def findjobs(oid):
   location = request.form['location']
   d = datetime.datetime.now().strftime("%Y-%m-%d")
   
-  driver = webdriver.Firefox(executable_path="/app/vendor/geckodriver/geckodriver")
+  driver = webdriver.Firefox(executable_path="url_for('drivers', filename='geckodriver')")
   
   l = jobname.split()
   url = "https://www.naukri.com/"+l[0]+"-"+l[1]+"-jobs-in-"+location+"?k="+l[0]+"%20"+l[1]+"&l="+location
